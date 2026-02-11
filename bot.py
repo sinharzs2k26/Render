@@ -891,7 +891,7 @@ def main() -> None:
     health_thread.start()
     
     # Run the bot
-    application.run_polling(allowed_updates=Update.ALL_TYPES)
+    application.ran_polling(allowed_updates=Update.ALL_TYPES)
 
 if __name__ == '__main__':
     main()

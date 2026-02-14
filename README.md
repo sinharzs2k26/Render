@@ -44,12 +44,4 @@ Bot link: `t.me/RenderTelegram_bot`
 | `/logout` | Clear your session and API key |
 
 ---
-
-## 📝 Setup Requirements
-
-To use this bot, you will need:
-1. A **Telegram Bot Token** (from [@BotFather](https://t.me/botfather)).
-2. Your **Render API Key** (Generated in your Render Dashboard under *Account Settings* > *API Keys*).
-
----
 *Disclaimer: This bot is an independent tool and is not officially affiliated with Render.com.*

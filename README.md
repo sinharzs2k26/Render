@@ -38,10 +38,20 @@ Bot link: `t.me/RenderTelegram_bot`
 | :--- | :--- |
 | `/start` | Welcome and introduction |
 | `/login` | Securely connect your Render API Key |
-| `/services` | List all active/suspended services |
-| `/deploy` | Trigger a new service deployment |
-| `/updatenv` | Add or edit an environment variable |
 | `/logout` | Clear your session and API key |
+| `/services` | List all active/suspended services |
+| `/serviceinfo` | Get deep-dive details of a service |
+| `/deploy` | Trigger a new service deployment |
+| `/deployinfo` | Check the status of the latest deploy |
+| `/canceldeploy` | Stop an in-progress deployment |
+| `/suspend` | Pause a running service |
+| `/resume` | Start a suspended service |
+| `/listenv` | View current environment variables |
+| `/updatenv` | Add or edit an environment variable |
+| `/deletenv` | Delete a specific env var |
+| `/updatefullenv` | Add multiple variables or bulk replace all |
+| `/deleteservice` | Permanently delete a service |
 
 ---
+
 *Disclaimer: This bot is an independent tool and is not officially affiliated with Render.com.*

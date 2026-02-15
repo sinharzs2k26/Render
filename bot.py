@@ -308,7 +308,7 @@ async def list_services(update: Update, context: ContextTypes.DEFAULT_TYPE):
         
     res = requests.get(f"{RENDER_URL}/services?limit=50", headers=headers)
     if res.status_code == 200:
-        full_message = "<b>📋 Render Services List</b>\n" + "—" * 12 + "\n"
+        full_message = "<b>📋 Render Services List</b>\n" + "—" * 14 + "\n"
         for item in res.json():
             svc = item['service']
             details = svc.get('serviceDetails', {})

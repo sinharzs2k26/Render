@@ -37,6 +37,7 @@ Bot link: `t.me/RenderTelegram_bot`
 | Command | Action |
 | :--- | :--- |
 | `/start` | Welcome and introduction |
+| `/help` | View all commands and how to use them |
 | `/login` | Securely connect your Render API Key |
 | `/logout` | Clear your session and API key |
 | `/services` | List all active/suspended services |
@@ -44,13 +45,20 @@ Bot link: `t.me/RenderTelegram_bot`
 | `/deploy` | Trigger a new service deployment |
 | `/deployinfo` | Check the status of the latest deploy |
 | `/canceldeploy` | Stop an in-progress deployment |
+| `/toggleautodeploy` | Turn ON or OFF auto deploy of a service |
+| `/logs` | See logs of a deployed service |
 | `/suspend` | Pause a running service |
 | `/resume` | Start a suspended service |
 | `/listenv` | View current environment variables |
 | `/updatenv` | Add or edit an environment variable |
 | `/deletenv` | Delete a specific env var |
 | `/updatefullenv` | Add multiple variables or bulk replace all |
+| `/rename` | Change name of a service |
+| `/changestartcmd` | Change start command of a service |
+| `/changebuildcmd` | Change build command of a service |
+| `/buildfilter` | Add ignored paths whose changes will not trigger a new build |
 | `/deleteservice` | Permanently delete a service |
+| `/accountinfo` | See your Render account information |
 
 ---
 

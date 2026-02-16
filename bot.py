@@ -338,7 +338,7 @@ async def toggle_suspension(svc_id, context, action):
     headers = get_headers(context)
     r = requests.post(f"{RENDER_URL}/services/{svc_id}/{action}", headers=headers)
     status_text = "Suspended ⏸" if action == "suspend" else "Resumed ▶️"
-    return f"✅ Service {status_text}" if r.status_code == 202 else f"❌ {action} failed: {r.text}"
+    return f"Service {status_text}" if r.status_code == 202 else f"❌ {action} failed: {r.text}"
 
 async def change_service_name(svc_id, context, user_input):
     headers = get_headers(context)

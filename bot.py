@@ -94,7 +94,7 @@ async def login(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(
             "<b>🔑 Login to Render</b>\n"
             "Please provide your API key to use the bot: <code>rnd_xxxxxxxxxxxx</code>\n\n"
-            "📌 <i>Your API key will be pinned for your quick access if the bot server restarts and so your key gets cleared.</i>",
+            "📌 <i>Your API key will be pinned for your quick access while logging in back if the bot server restarts and so your key gets cleared.</i>",
             reply_markup=ForceReply(selective=True),
             parse_mode="HTML"
         )

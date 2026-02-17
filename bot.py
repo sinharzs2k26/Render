@@ -435,7 +435,7 @@ async def handle_reply_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
             except Exception as e:
                 print(f"Pin failed: {e}")
         else:
-            await update.message.reply_text("❌ <b>Invalid Key.</b> Please try /login again.")
+            await update.message.reply_html("❌ <b>Invalid Key.</b> Please try /login again.")
             
     match = re.search(r"srv-[a-z0-9]+", prompt_text)
     if not match:

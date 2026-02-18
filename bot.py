@@ -9,7 +9,7 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ForceRe
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes, MessageHandler, filters
 
 # --- CONFIGURATION ---
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+TELEGRAM_TOKEN = "8556710977:AAEz5sBHsH8Rt3xEA6UuyiF_6-1-EcLvW6A"
 RENDER_URL = "https://api.render.com/v1"
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -258,7 +258,7 @@ async def get_service_logs(svc_id, context):
         "ownerId": owner_id,
         "direction": "backward",
         "resource": svc_id,
-        "limit": 5
+        "limit": 10
     }
     
     log_res = requests.get(log_url, headers=headers, params=params)

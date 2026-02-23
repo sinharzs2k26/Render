@@ -373,7 +373,7 @@ async def handle_reply_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if test_res.status_code == 200:
             context.user_data["api_key"] = user_input
             await update.message.reply_text(
-                "✅ <b>Login successful!</b> You can now use management commands.\n"
+                "✅ <b>Login successful!</b> You can now use management commands.\n\n"
                 "<i>📌 You have to re-login if the bot server gets updates and so your API key gets cleared.</i>\n\n"
                 "If you want to logout, send /logout and your API key will be cleared.",
                 parse_mode="HTML"

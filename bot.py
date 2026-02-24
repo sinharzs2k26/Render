@@ -124,7 +124,7 @@ async def list_services(update: Update, context: ContextTypes.DEFAULT_TYPE):
             public_url = details.get('url', 'No public URL')
             dash_url = svc.get('serviceDetailsUrl', f"https://dashboard.render.com/web/{svc['id']}")
             status_emoji = "🟢" if svc['suspended'] == "not_suspended" else "🔴"
-            full_message += (f"<u>{status_emoji} <b>{svc['name']}</b></u>\n"
+            full_message += (f"{status_emoji} <u><b>{svc['name']}</b></u>\n"
                             f"<b>Service ID: </b><code>{svc['id']}</code>\n\n"
                             f"<b>🔗 Service url: </b>{public_url}\n\n"
                             f"👉 <a href='{dash_url}'>Tap here to view on <b>Render Dashboard</b></a>\n\n\n")

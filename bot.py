@@ -124,7 +124,7 @@ async def list_services(update: Update, context: ContextTypes.DEFAULT_TYPE):
             public_url = details.get('url', 'No public URL')
             dash_url = svc.get('serviceDetailsUrl', f"https://dashboard.render.com/web/{svc['id']}")
             status_emoji = "🟢" if svc['suspended'] == "not_suspended" else "🔴"
-            full_message += (f"{status_emoji} <u><b>{svc['name']}</b></u>\n"
+            full_message += (f"<u>{status_emoji} <b>{svc['name']}</b></u>\n"
                             f"<b>Service ID: </b><code>{svc['id']}</code>\n\n"
                             f"<b>🔗 Service url: </b>{public_url}\n\n"
                             f"👉 <a href='{dash_url}'>Tap here to view on <b>Render Dashboard</b></a>\n\n\n")
@@ -171,7 +171,7 @@ async def cancel_last_deploy(svc_id, context):
         cancel_url = f"{RENDER_URL}/services/{svc_id}/deploys/{deploy_id}/cancel"
         cancel_res = requests.post(cancel_url, headers=headers)
         if cancel_res.status_code == 200:
-            return f"🛑 <b>Deploy Cancelled!</b>\nID: <code>{deploy_id}</code>"
+            return f"🛑 <b>Deploy Cancelled!</b>"
         else:
             return f"❌ Failed to cancel"
     return f"❌ Error fetching deploy ID: {res.status_code}"
@@ -261,7 +261,7 @@ async def update_env_variable(svc_id, context, user_input):
     headers = get_headers(context)
     r = requests.put(url, json=payload, headers=headers)
     if r.status_code == 200:
-        return f"✅ Successfully set <code>{value}</code> to <code>{key}</code> variable"
+        return f"✅ Successfully set <code>{key}</code> to <code>{value}</code>"
     else:
         return f"❌ Failed to update: {r.text}"
 

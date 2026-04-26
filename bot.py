@@ -77,8 +77,8 @@ async def admin(update: Update, context: ContextTypes.DEFAULT_TYPE):
         bot_status_txt = "No User ID saved in the server. Users have not sent /start yet after updating the bot."
     keyboard = [
         [InlineKeyboardButton("📢 Broadcast a message", callback_data="broadcast")],
-        [InlineKeyboardButton("🔄 Refresh", callback_data="refresh")],
         [InlineKeyboardButton("🆔 Get all IDs", callback_data="get_ids")],
+        [InlineKeyboardButton("🔄 Refresh", callback_data="refresh")]
     ]
     if update.message:
         await update.message.reply_text(bot_status_txt, reply_markup=InlineKeyboardMarkup(keyboard))
